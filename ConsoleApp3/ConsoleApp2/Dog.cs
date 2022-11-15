@@ -9,13 +9,8 @@ namespace ConsoleApp2
     public class Dog
     {
         public int Age { get; set; }
-        public string Name { get; private set; } = "Azor";
+        public string Name { get;  set; } 
 
-        public void SetName(string name)
-        {
-            GetVoice();
-            Name = name;
-        }
 
         private void GetVoice()
         {

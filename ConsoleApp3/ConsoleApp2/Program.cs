@@ -5,10 +5,10 @@ using ConsoleApp2;
 
 Console.WriteLine("Hello, World!");
 
-int x = 0;
+var x = 0;
 
 //////////// PERSON ///////////
-Person szymon = new Person(75, 190);
+var szymon = new Person(75, 190);
 szymon.age = 27;
 szymon.name = "Szymon";
 
@@ -23,7 +23,20 @@ Dog azor = new Dog();
 azor.Age = 27;
 
 Console.WriteLine(azor.Name);
-azor.SetName("Kubuś");
-Console.WriteLine(azor.Name);
 
 //////// DOG ////////////
+///
+
+
+// VAR //
+double height = 190;
+double width = 75;
+
+Console.WriteLine(height / width);
+
+var height2 = 190.0;
+var width2 = 75.0;
+Console.WriteLine(height2 / width2);
+
+
+// VAR //
