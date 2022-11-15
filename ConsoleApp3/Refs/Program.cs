@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Refs;
+
 Console.WriteLine("Hello, World!");
 
 int x = 5;
@@ -24,3 +26,7 @@ else
 {
     Console.WriteLine("Nie działa!");
 }
+
+
+StaticClass.Test();
+Console.WriteLine();
