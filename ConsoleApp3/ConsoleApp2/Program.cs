@@ -3,11 +3,9 @@ Console.WriteLine("Hello, World!");
 
 int x = 0;
 
-Person szymon = new Person();
+Person szymon = new Person(75, 190);
 szymon.age = 27;
 szymon.name = "Szymon";
-szymon.height = 190;
-szymon.weight = 75;
 
 double szymonBMI = szymon.GetBMI();
 Console.WriteLine(szymonBMI);
@@ -17,14 +15,25 @@ public class Person
 {
     public string name;
     public int age;
-    public double weight;
-    public double height;
+    private double weight;
+    private double height;
+
+    public Person(double weightComing, double heightComing)
+    {
+        weight = weightComing;
+        height = heightComing;
+    }
+    public Person()
+    {
+
+    }
 
     public double GetBMI()
     {
         double bmi = weight / height;
         return bmi;
     }
+
     public void ShowAll()
     {
         Console.WriteLine($"{name} ma {age} lat i jego bmi to {GetBMI()}");
