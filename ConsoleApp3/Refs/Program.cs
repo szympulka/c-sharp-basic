@@ -30,3 +30,12 @@ else
 
 StaticClass.Test();
 Console.WriteLine();
+
+
+var date = DateTime.UtcNow; // Czas podany w utc
+var polandTime = date.PolandTime(); // Wywołanie Extension Metody
+var polandTime2 = date.PolandTime(5); // Wywołanie Extension Metody
+Console.WriteLine(polandTime);
+Console.WriteLine(polandTime2);
+
+Console.WriteLine(polandTime.ToString("MM/dd.yyy HH:mm:ss:ff"));

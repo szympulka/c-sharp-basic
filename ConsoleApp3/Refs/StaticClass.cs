@@ -20,4 +20,17 @@ namespace Refs
             Console.WriteLine("test2");
         }
     }
+
+    public static class qrwerqwerqwerqweewqrqwerrqwerw // Extension Metoda zawsze musi być statyczna
+    {
+        public static DateTime PolandTime(this DateTime date) // Słówko kluczowe this
+        {
+            return date.AddHours(2);
+        }
+        public static DateTime PolandTime(this DateTime date, int timeZone) // Słówko kluczowe this
+        {
+            return date.AddHours(timeZone);
+        }
+    }
+
 }
