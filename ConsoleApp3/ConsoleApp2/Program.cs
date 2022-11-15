@@ -38,5 +38,4 @@ var height2 = 190.0;
 var width2 = 75.0;
 Console.WriteLine(height2 / width2);
 
-
 // VAR //
