@@ -6,16 +6,14 @@ var list2 = new List<double>();
 
 for (double i = 0; i < 10; i++)
 {
-    list2.Add(i * 2.56 / 5 + 9 - (33 * 0.2));
+    var random = new Random();
+    list2.Add(random.Next(-100, 100));
 }
 
-list2.Add(2323.23);
-//for (int i = 0; i < list2.Count(); i++)
+//foreach (var item in list2)
 //{
-//    Console.WriteLine(list2[i]);
+//    Console.WriteLine(item);
 //}
 
-foreach (var item in list2)
-{
-    Console.WriteLine(item);
-}
+var rand = new Random();
+Console.WriteLine(rand.Next(2, 2));
