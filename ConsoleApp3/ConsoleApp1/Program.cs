@@ -1,5 +1,7 @@
 ﻿
 #region Without array
+using ConsoleApp2;
+
 Console.WriteLine("Pierwszy przypadek");
 int sum = 0;
 for (int i = 0; i < 3; i++)
@@ -47,3 +49,4 @@ for (int i = 0; i < index; i++)
 Console.WriteLine($"suma wynosi {array2.Sum()}");
 Console.ReadLine();
 #endregion
+

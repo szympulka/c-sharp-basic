@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+[assembly: InternalsVisibleTo("TestProject1")]
 namespace ConsoleApp2
 {
     internal class Person
@@ -25,7 +27,7 @@ namespace ConsoleApp2
 
         public double GetBMI()
         {
-            double bmi = weight / height;
+            double bmi = weight / (height * height);
             return bmi;
         }
 
