@@ -24,6 +24,7 @@ namespace Refs
                 DayOfWeek.Thursday => throw new NotImplementedException(),
                 DayOfWeek.Friday => throw new NotImplementedException(),
                 DayOfWeek.Saturday => throw new NotImplementedException(),
+                _ => throw new NotImplementedException(),
             };
 
             Console.WriteLine(favoriteTask);
