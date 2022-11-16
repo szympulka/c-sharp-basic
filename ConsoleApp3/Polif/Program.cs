@@ -7,9 +7,6 @@ var animal = new Animal();
 var dog = new Dog();
 var cat = new Cat();
 
-Console.WriteLine($"{dog.Name} {dog.GetVoice()}");
-
-
 cat.Name = "Filemon";
 dog.Name = "Reksio";
 animal.Name = "Jestem Animal";

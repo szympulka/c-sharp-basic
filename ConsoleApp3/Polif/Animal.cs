@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Polif
         public int Age { get; set; }
         public string Name { get; set; } = "Animal";
 
-        public string GetVoice()
+        public virtual string GetVoice()
         {
             return "Voice";
         }
@@ -19,22 +20,33 @@ namespace Polif
 
     public class Dog : Animal
     {
-        private string age;
         public Dog()
         {
             base.Name = "dog"; // Z klasy bazowej
-            this.age = "adsfadsf";
+            Console.WriteLine(base.GetVoice());
+            Console.WriteLine(this.GetVoice());
         }
 
         public int Legs { get; set; }
+
+        public override string GetVoice()
+        {
+            return "Hau hau";
+        }
 
     }
 
     public class Cat : Animal
     {
+
         public string GetHumor()
         {
             return "Funny";
+        }
+
+        public override string GetVoice()
+        {
+            return "Mial mial";
         }
     }
 }
