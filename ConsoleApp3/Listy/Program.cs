@@ -4,6 +4,7 @@ Console.WriteLine("Hello, World!");
 
 var list2 = new List<double>();
 
+
 for (double i = 0; i < 10; i++)
 {
     var random = new Random();
