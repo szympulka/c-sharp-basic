@@ -15,7 +15,7 @@ for (int i = 0; i <= n; i++)
     Console.Write(stars);
     Console.WriteLine(spaces);
 }
-
 spaces = new string(' ', stars.Length + spaces.Length);
 Console.Write(spaces);
 Console.Write('*');
+
