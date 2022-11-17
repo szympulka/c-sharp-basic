@@ -11,11 +11,12 @@ namespace Database
     public class ShopContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Shop> Shops { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server=localhost;Database=Shop;Trusted_Connection=True;TrustServerCertificate=true")
+                @"Server=localhost;Database=Shop2;Trusted_Connection=True;TrustServerCertificate=true")
                 .EnableSensitiveDataLogging()
                 .UseLazyLoadingProxies();
         }
