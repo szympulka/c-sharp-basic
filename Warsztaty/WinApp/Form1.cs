@@ -1,5 +1,6 @@
 using Database;
 using Database.Domain;
+using System.Collections;
 using System.Windows.Forms.VisualStyles;
 
 namespace WinApp
@@ -37,36 +38,43 @@ namespace WinApp
             values[2] = "3";
 
             var item = new ListViewItem(values);
+
+
+            var item2 = new ListViewItem(new string[3]
+            {
+                "1",
+                "2",
+                "3"
+            });
+
             productList.Items.Add(item);
         }
 
         private void productList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var priceDetails = new PriceDetails(1);
+            var id = productList.FocusedItem.Text;
+            var priceDetails = new PriceDetails(int.Parse(id));
             priceDetails.ShowDialog();
         }
 
         private void shopList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CleanProductList();
             var db = new ShopContext();
-            var shopName = shopList.FocusedItem.Text;
+            CleanProductList();
 
-            var shop = db.Set<Shop>().First(x => x.Name == shopName);
-            var products = shop.Products;
 
-            foreach (var product in products)
-            {
-                string[] values = new string[5];
-                values[0] = product.Id.ToString();
-                values[1] = product.Name;
-                values[2] = product.Price.ToString();
-                values[3] = product.ShopId.ToString();
-                values[4] = product.ProductPriceHistories.Count().ToString();
-
-                productList.Items.Add(new ListViewItem(values));
-            }
-
+            productList.Items.AddRange(
+                            db.Set<Shop>()
+                              .First(x => x.Name == shopList.FocusedItem.Text)
+                              .Products
+                              .Select(product => new ListViewItem(new string[5]
+                              {
+                                product.Id.ToString(),
+                                product.Name,
+                                product.Price.ToString(),
+                                product.ShopId.ToString(),
+                                product.ProductPriceHistories.Count().ToString(),
+                              })).ToArray());
         }
 
         private void CleanProductList() => productList.Items.Clear();
