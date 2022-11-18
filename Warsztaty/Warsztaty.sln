@@ -23,13 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tree", "Tree\Tree.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1C716E61-CFC2-4FB7-BA9F-C94EEBD3A0EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "obj_class", "obj_class\obj_class.csproj", "{5801972A-8294-4EFE-90FA-BEA79DCC7EF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "obj_class", "obj_class\obj_class.csproj", "{5801972A-8294-4EFE-90FA-BEA79DCC7EF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{18B3A056-58F5-4B21-B462-FC937C892732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{B1CF33D8-65D1-444A-8490-35F63F46F92F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{B1CF33D8-65D1-444A-8490-35F63F46F92F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{24A20033-29B3-4B5D-8810-6D8FF31804F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{24A20033-29B3-4B5D-8810-6D8FF31804F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinApp", "WinApp\WinApp.csproj", "{3EB9745F-CFD8-47CC-A3D9-0DD145A25722}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,10 @@ Global
 		{24A20033-29B3-4B5D-8810-6D8FF31804F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24A20033-29B3-4B5D-8810-6D8FF31804F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24A20033-29B3-4B5D-8810-6D8FF31804F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB9745F-CFD8-47CC-A3D9-0DD145A25722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB9745F-CFD8-47CC-A3D9-0DD145A25722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB9745F-CFD8-47CC-A3D9-0DD145A25722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB9745F-CFD8-47CC-A3D9-0DD145A25722}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +102,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B1CF33D8-65D1-444A-8490-35F63F46F92F} = {18B3A056-58F5-4B21-B462-FC937C892732}
 		{24A20033-29B3-4B5D-8810-6D8FF31804F2} = {18B3A056-58F5-4B21-B462-FC937C892732}
+		{3EB9745F-CFD8-47CC-A3D9-0DD145A25722} = {18B3A056-58F5-4B21-B462-FC937C892732}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E53C69-1CB2-4A26-B5DD-D8034DB10172}

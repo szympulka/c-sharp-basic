@@ -12,6 +12,7 @@ namespace Database
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Shop> Shops { get; set; }
+        public DbSet<ProductPriceHistory> ProductPriceHistories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

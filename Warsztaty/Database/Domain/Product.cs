@@ -20,5 +20,7 @@ namespace Database.Domain
         public int ShopId { get; set; }
         [ForeignKey(nameof(ShopId))]
         public virtual Shop Shop { get; set; }
+
+        public virtual ICollection<ProductPriceHistory> ProductPriceHistories { get; set; }
     }
 }
