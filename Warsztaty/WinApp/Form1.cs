@@ -42,7 +42,8 @@ namespace WinApp
 
         private void productList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var priceDetails = new PriceDetails(1);
+            priceDetails.ShowDialog();
         }
 
         private void shopList_SelectedIndexChanged(object sender, EventArgs e)
